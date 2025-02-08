@@ -9,11 +9,20 @@
 - 简洁的图形界面
 - 无需管理员权限
 
+## 软件截图
+
+![软件界面截图](https://github.com/user-attachments/assets/c9e99e23-ab6d-4a87-ab4d-eddbbbde46cd)
+
 ## 使用说明
 
 1. 运行程序后，软件会自动检测微信的安装信息
 2. 在"打开数量"输入框中输入需要启动的微信数量（1-10）
 3. 点击"启动微信"按钮即可同时打开多个微信客户端
+
+## 下载
+
+您可以从以下位置下载已编译好的可执行文件（exe）：
+[点击下载最新版本](https://github.com/KamiOrz/WXMulti/releases)
 
 ## 系统要求
 
