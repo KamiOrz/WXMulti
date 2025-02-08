@@ -31,3 +31,6 @@
 
 ## 运行方式
 python main.py
+
+## 编译exe
+python build.py

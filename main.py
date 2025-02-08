@@ -12,6 +12,14 @@ class WeChatPathFinder:
         self.root.geometry("460x220")
         self.root.resizable(False, False)  # 禁止调整窗口大小
         
+        # 设置应用图标
+        try:
+            icon_path = os.path.join(os.path.dirname(__file__), "assets", "icon.png")
+            icon = tk.PhotoImage(file=icon_path)
+            self.root.iconphoto(True, icon)
+        except Exception as e:
+            print(f"加载图标失败: {e}")
+        
         # 创建界面元素
         self.create_widgets()
         
