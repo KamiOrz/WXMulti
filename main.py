@@ -9,7 +9,7 @@ class WeChatPathFinder:
         # 创建主窗口
         self.root = tk.Tk()
         self.root.title("WXMulti 微信多开启动器")
-        self.root.geometry("460x220")
+        self.root.geometry("460x260")  # 增加窗口高度
         self.root.resizable(False, False)  # 禁止调整窗口大小
         
         # 设置应用图标
@@ -83,6 +83,30 @@ class WeChatPathFinder:
         self.status_var = tk.StringVar()
         status_label = ttk.Label(control_frame, textvariable=self.status_var, foreground="gray")
         status_label.grid(row=0, column=3, padx=(10, 0))
+        
+        # 添加开源社区链接
+        link_frame = ttk.Frame(self.root)
+        link_frame.pack(fill="x", padx=15, pady=(5, 10))
+        
+        # 创建超链接样式的标签
+        link_label = ttk.Label(
+            link_frame, 
+            text="下载 WXMulti 最新开源版本", 
+            foreground="blue", 
+            cursor="hand2"
+        )
+        link_label.pack(side="left")
+        
+        # 添加下划线
+        link_label.bind("<Enter>", lambda e: link_label.configure(font=("TkDefaultFont", 9, "underline")))
+        link_label.bind("<Leave>", lambda e: link_label.configure(font=("TkDefaultFont", 9)))
+        
+        # 点击打开浏览器
+        def open_github(event):
+            import webbrowser
+            webbrowser.open("https://github.com/KamiOrz/WXMulti")
+            
+        link_label.bind("<Button-1>", open_github)
 
     def get_wechat_info(self):
         try:
